@@ -10,6 +10,11 @@ app.get('/yay-gif', function(req, res){
   res.render('hello-gif', {gifUrl: gifUrl});
 });
 
+app.get('/greetings/:name', function(req, res){
+  var name = req.params.name;
+  res.render('greetings', {name: name});
+})
+
 app.listen(3000,function(){
   console.log("listening on port 3000");
 });
