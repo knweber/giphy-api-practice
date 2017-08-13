@@ -8,7 +8,7 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res){
   console.log(req.query.term);
-  var queryString = "Ron Swanson";
+  var queryString = req.query.term;
   var term = encodeURIComponent(queryString);
   var url = 'http://api.giphy.com/v1/gifs/search?q=' + term + '&api_key=dc6zaTOxFJmzC';
 
